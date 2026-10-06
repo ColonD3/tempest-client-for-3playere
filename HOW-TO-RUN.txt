@@ -1,0 +1,19 @@
+Tempest Client (Minecraft 26.2 in the browser) - how to run on a Chromebook
+
+You cannot just double-click index.html. Chrome blocks that.
+The files have to be served from a tiny local web server. Pick ONE way:
+
+WAY 1 - Chrome app (easiest, no Linux needed)
+1. Chrome Web Store -> search "Web Server for Chrome" (by Kzahel) -> Add to Chrome.
+   (If your Chromebook is managed by a school it may be blocked, use Way 2.)
+2. Open the app, press "Choose folder", pick the unzipped Tempest-Client folder.
+3. Click the link it shows (http://127.0.0.1:8887). Click the page once, the game loads.
+
+WAY 2 - Linux (if your Chromebook has it)
+1. Settings -> Advanced -> Developers -> Linux development environment -> Turn on.
+2. Put the unzipped Tempest-Client folder in "Linux files" (Files app).
+3. In the Terminal:  cd Tempest-Client && python3 -m http.server 8000
+4. In Chrome open http://localhost:8000 and click the page once.
+
+Tips: first load takes a bit (about 90MB). Use Chrome, press F11 for fullscreen.
+Keep the server running while you play. Worlds save in your browser.
